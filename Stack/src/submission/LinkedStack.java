@@ -8,30 +8,41 @@ public class LinkedStack<T> implements Stack<T> {
 	@Override
 	public void push(T newEntry) {
 		// TODO Auto-generated method stub
+		head = new Node(newEntry, head);
+		
 		
 	}
 
 	@Override
 	public T pop() {
 		// TODO Auto-generated method stub
-		return null;
+		T temp = head.data;
+		head = head.next;
+		return temp;
+		
 	}
 
 	@Override
 	public T peek() {
 		// TODO Auto-generated method stub
-		return null;
+		return Node top;
 	}
 
 	@Override
 	public boolean isEmpty() {
 		// TODO Auto-generated method stub
-		return false;
+		if(top != 0) {
+			// TODO Auto-generated method stub
+			return false;
+			 }
+			 return true
 	}
 
 	@Override
 	public void clear() {
 		// TODO Auto-generated method stub
+		top = null;
+		
 		
 	}
 	
